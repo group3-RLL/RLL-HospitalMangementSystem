@@ -1,3 +1,11 @@
+.login{
+    border:none;
+    background:rgb(11, 194, 11);
+    color:white; 
+height: 46px;
+
+}
+
 .logout{
     background:black;
     color:white;
@@ -5,3 +13,4 @@
     border:none;
 
 }
+
