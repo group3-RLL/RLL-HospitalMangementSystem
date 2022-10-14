@@ -72,9 +72,7 @@ INSERT INTO `appointment` (`dName`, `pName`, `room`) VALUES
 
 DROP TABLE IF EXISTS `doctor`;
 CREATE TABLE IF NOT EXISTS `doctor` (
-  `count` int(11) NOT NULL AUTO_INCREMENT,
-  `date` varchar(10) NOT NULL,
-  `id` varchar(10) NOT NULL,
+  `id` varchar(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) NOT NULL,
   `age` int(5) NOT NULL,
   `gender` varchar(8) NOT NULL,
@@ -85,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `doctor` (
   `status` varchar(10) NOT NULL,
   `address` varchar(20) NOT NULL,
   `room` int(11) NOT NULL,
-  PRIMARY KEY (`count`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
@@ -93,11 +91,11 @@ CREATE TABLE IF NOT EXISTS `doctor` (
 --
 
 INSERT INTO `doctor` (`count`, `date`, `id`, `name`, `age`, `gender`, `blood`, `dept`, `phone`, `email`, `status`, `address`, `room`) VALUES
-(1, '02-04-2018', 'sjb0HMSd1', 'Jeremy', 20, 'Male', 'A-', 'Medecine', '+8801757009622', 'jeremy@gmail.com', 'Single', 'Berlin', 806),
-(2, '31-01-2018', 'sjb0HMSd2', 'Arthur', 32, 'Male', 'A+', 'Dental', '+8801665546776', 'arthur@gmail.com', 'Married', 'Paris', 202),
-(3, '12-12-2016', 'sjb0HMSd3', 'Damon', 34, 'Male', 'AB-', 'Neurology', '+8801734253425', 'damon@gmail.com', 'Divorced', 'NYC', 809),
-(4, '21-0802015', 'sjb0HMSd4', 'Sammuel', 43, 'Male', 'B+', 'Nutrition', '+8801754323454', 'samm@gmail.com', 'Single', 'Boston', 44),
-(5, '09-08-2017', 'sjb0HMSd4', 'Elsa', 23, 'Female', 'O-', 'Gynaecology', '+8801765432187', 'elsa@gmail.com', 'Single', 'Massachusetts', 909);
+('1', 'Jeremy', 20, 'Male', 'A-', 'Medecine', '+8801757009622', 'jeremy@gmail.com', 'Single', 'Berlin', 806),
+('2', 'Arthur', 32, 'Male', 'A+', 'Dental', '+8801665546776', 'arthur@gmail.com', 'Married', 'Paris', 202),
+('3', 'Damon', 34, 'Male', 'AB-', 'Neurology', '+8801734253425', 'damon@gmail.com', 'Divorced', 'NYC', 809),
+('4', 'Sammuel', 43, 'Male', 'B+', 'Nutrition', '+8801754323454', 'samm@gmail.com', 'Single', 'Boston', 44),
+('5', 'Elsa', 23, 'Female', 'O-', 'Gynaecology', '+8801765432187', 'elsa@gmail.com', 'Single', 'Massachusetts', 909);
 
 -- --------------------------------------------------------
 
