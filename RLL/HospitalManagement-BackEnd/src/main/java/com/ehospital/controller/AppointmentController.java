@@ -51,7 +51,7 @@ public class AppointmentController {
     // update product rest api
 
     @PutMapping("/appointment/{id}")
-    public void editDoctor(@PathVariable("id") Integer id, @RequestBody Appointment appointment) {
+    public void editAppointment(@PathVariable("id") Integer id, @RequestBody Appointment appointment) {
         appointmentRepository.save(appointment);
     }
 
