@@ -66,7 +66,7 @@ export class DashboardComponent implements OnInit {
       }
 
       onSubmit(f: NgForm) {
-        const url = 'http://localhost:9090/api/v1/doctor/addnew';
+        const url = 'http://localhost:9090/api/v1/doctor';
         this.httpClient.post(url, f.value)
           .subscribe((result) => {
             this.ngOnInit(); //reload the table
@@ -117,7 +117,7 @@ export class DashboardComponent implements OnInit {
     }
 
     onSave() {
-        const editURL = 'http://localhost:9090/api/v1/doctor/' + this.editForm.value.id + '/edit';
+        const editURL = 'http://localhost:9090/api/v1/doctor/'+this.editForm.value.id;
         console.log(this.editForm.value);
         this.httpClient.put(editURL, this.editForm.value)
           .subscribe(  data =>{
@@ -136,7 +136,7 @@ export class DashboardComponent implements OnInit {
       }
 
       onDelete() {
-        const deleteURL = 'http://localhost:9090/api/v1/doctor/' + this.deleteId + '/delete';
+        const deleteURL = 'http://localhost:9090/api/v1/doctor/'+ this.deleteId;
         this.httpClient.delete(deleteURL)
           .subscribe((results) => {
             this.ngOnInit();
