@@ -24,7 +24,7 @@ public class DoctorController {
     }
 
     // create product rest api
-    @PostMapping("/doctor/addnew")
+    @PostMapping("/doctor")
     public Doctor createDoctor(@RequestBody Doctor doctor) {
         return doctorRepository.save(doctor);
     }
@@ -39,13 +39,13 @@ public class DoctorController {
 
     // update product rest api
 
-    @PutMapping("/doctor/{id}/edit")
+    @PutMapping("/doctor/{id}")
     public void editDoctor(@PathVariable("id") Integer id, @RequestBody Doctor doctor) {
         doctorRepository.save(doctor);
     }
 
     // delete product rest api
-    @DeleteMapping("/doctor/{id}/delete")
+    @DeleteMapping("/doctor/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteDoctor(@PathVariable int id){
         Doctor doctor = doctorRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("No results found."));
