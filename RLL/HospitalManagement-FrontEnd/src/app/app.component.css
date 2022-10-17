@@ -1,0 +1,7 @@
+.flex-wrapper {
+    display: flex;
+    min-height:2vh;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+  }

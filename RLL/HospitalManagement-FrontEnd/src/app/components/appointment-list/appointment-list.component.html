@@ -1,0 +1,36 @@
+<div class="container">
+<hr>
+<hr>
+<hr>
+<h2>Appointment List</h2>
+<a style="color: rgb(86, 86, 86); font-size: x-large;">Welcome to Appointment list page.</a>
+  <hr>
+<table class="table table-striped">
+    <thead class="table-header">
+        <tr>
+            <th> ID </th>
+            <th> Patient's Name </th>
+            <th> Doctor's Name </th>
+            <th> Symptoms </th>
+            <th> Room </th>
+            <th> Actions </th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let appointment of appointments">
+            <td> {{ appointment.id }} </td>
+            <td> {{ appointment.pname }} </td>
+            <td> {{ appointment.dname}} </td>
+            <td> {{ appointment.symptoms}} </td>
+            <td> {{ appointment.room}} </td>
+
+            <td>
+                
+                <button (click)="deleteAppointment(appointment.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>   
+</table>
+<button class="btn btn-success" routerLink="/dashboard">Back to Dashboard</button>
+</div>
