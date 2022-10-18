@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Application} from 'src/app/common/application';
-import { PatientService } from 'src/app/services/patient.service'
+import { DoctorService } from 'src/app/services/doctor.service';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
@@ -13,7 +13,7 @@ export class ApplicationComponent implements OnInit {
   role: string =localStorage.getItem('role')
   application: Application = new Application();
   deleteId: string;
-  constructor(private patientService: PatientService,private route: ActivatedRoute, private httpClient: HttpClient) { }
+  constructor(private doctorService: DoctorService,private route: ActivatedRoute, private httpClient: HttpClient) { }
 
   ngOnInit(): void {
     this.getApplication();
@@ -27,11 +27,19 @@ export class ApplicationComponent implements OnInit {
   }
 
   approve(id: number){
+      this.doctorService.deleteApplication(id).subscribe( data => {
+        console.log(data);
+        this.getApplication();
+      })
 
     alert("Application Approved. Mail sent to applicant!")
   }
 
   reject(id: number){
+      this.doctorService.deleteApplication(id).subscribe( data => {
+        console.log(data);
+        this.getApplication();
+      })
 
     alert("Application Rejected.")
   }
