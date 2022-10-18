@@ -1,0 +1,8 @@
+<div class="form-header">
+<button style="margin: 5px;" class="btn btn-danger"  *ngIf="role == null"  routerLink="/login" style="font-size: 17px;" >Login</button>
+
+<button style="margin: 5px;" class="btn btn-danger" *ngIf="role != null" routerLink="/home" style="font-size: 17px;" (click)="logout()" >Logout</button>
+
+
+
+</div>

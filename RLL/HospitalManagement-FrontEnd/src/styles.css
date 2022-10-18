@@ -1,0 +1,155 @@
+/* You can add global styles to this file, and also import other style files */
+/* 
+ * ----------------------------
+ * Common CSS
+ * ----------------------------
+ */
+ @import "~bootstrap/dist/css/bootstrap.css";
+ @import "~font-awesome/css/font-awesome.css";
+ *{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+
+body{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+    font-size: 16;
+    line-height: 1.4;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+h2{
+    font-size:30px
+}
+
+h3{
+    font-size:24px
+}
+
+h4{
+    font-size:18px
+}
+
+h5{
+    font-size:15px
+}
+
+h6{
+    font-size:13px
+}
+
+a{
+    display:inline-block
+}
+
+a:active,a:focus,a:hover{
+    text-decoration:none;
+    outline:0
+}
+
+a,a:hover{
+    -webkit-transition:all .3s ease;
+    -o-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    transition:all .3s ease
+}
+
+
+.au-btn-submit{
+    font-weight: 700;
+    font-family: fangsong;
+    position: relative;
+    right: 0;
+    min-width: 93px;
+    color: #fff;
+    border: 1px solid #000000;
+    border-radius: 43px;
+    background: #ff590a;
+}
+
+.au-btn-submit:hover{
+    background:white;
+    color: #000;
+}
+
+.au-btn-submit>i{
+    font-size:20px;
+    color:#fff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%)
+}
+
+
+/* 
+ * ----------------------------
+ * Buttons
+ * ----------------------------
+ */
+
+ .btn-info{
+    color:#fff;
+    background-color:#0da8e4!important;
+    border-color:#0da8e4!important
+}
+.flex-wrapper {
+    display: flex;
+    min-height: 60vh;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    position: fixed;
+  }
+a.primary-btn{
+    background:#05143f;
+    padding:7px 20px;
+    text-align:center;
+    display:inline-block;
+    color:#fff;
+    border-radius:2px;
+    font-size:14px;
+    margin-top:5px
+}
+a.primary-btn:hover{
+    background:#0da8e4;
+    color:#fff
+}
+
+.active-link {
+  font-weight: bold;
+}
+
+/* 
+ * ----------------------------
+ * Footer section
+ * ----------------------------
+ */
+
+footer ul li a{
+    color:#fff;
+    font-size: 17px;
+}
+footer{
+    z-index:1;
+    position:relative;
+    text-align:right;
+}
+footer li a{
+    color:#313131;
+    font-weight:500
+}
+footer ul li{
+    display:inline-block;
+    font-size:14px;
+    padding:10px 20px
+}
