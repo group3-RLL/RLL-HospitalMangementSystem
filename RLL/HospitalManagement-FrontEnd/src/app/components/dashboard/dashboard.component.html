@@ -1,0 +1,15 @@
+<div  class="container">
+<br><br>
+  <!--Doctor Details-->
+    <div style="display: flex;" class="container">
+    <button  *ngIf="role == 'Admin'"  style="background:rgb(252, 89, 89); width:500px; height:200px" routerLink="/doctor" id="details"  >Doctor details</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button  *ngIf="role == 'Admin' || role=='Doctor'" id="details"style="background:#ef7e06;  width:500px; height:200px" routerLink="/patient">Patient details</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button  *ngIf="role == 'Admin' || role=='Doctor'" id="details" style="background:#3b5fb3; width:500px; height:200px" routerLink="/appointment">Appointment details</button>
+  </div><br>
+    <div style="display: flex;" class="container">
+    <button *ngIf="role == 'Admin'"  id="details" style="background:#6ec74e; width:345px; height:200px" routerLink="/invoice">Invoice details</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button *ngIf="role == 'Admin'"  id="details" style="background:#7a797a; width:345px; height:200px" routerLink="/application">Job Applications</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button  id="details" style="background:#07c0e1; width:345px; height:200px" routerLink="/home">Back to Home</button>  
+  </div>
+  <br><br>
+    </div>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>MedCare Hospitals</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"> <b style="color: white">MEDCARE HOSPITALS - HOSPITAL MANAGEMENT SYSTEM </b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            
+
+              
+
+
+          </ul>
+          
+            <div style="display:flex; justify-content: end;" class="mx-12">
+                <button  class="btn btn-danger" data-toggle="modal" data-target="#loginModal" style="color: white;" routerLink="/createappointment">Book an Appointment</button>
+                &nbsp;&nbsp;
+                <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a style="color:white;" href="javascript:void(0);" routerLink="register">Apply for Doctor</a></button>
+                &nbsp;&nbsp;
+                <app-login-status></app-login-status>
+            </div>
+        </div>
+    </nav>
+  <router-outlet></router-outlet>
+  <div class="container">
+  <div class="flex-wrapper">
+    <div class="container"></div>
+    <div class="footer">Contact : +101 4590 3467 &nbsp; &nbsp;© 2006-2022 MedCare Hospitals, Inc.</div>
+  </div>
+</div>
