@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.management.AttributeNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ehospital.dao.ApplicationRepository;
 import com.ehospital.entity.Application;
+import com.ehospital.entity.Doctor;
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/v1/")
@@ -37,4 +39,16 @@ public class ApplicationController {
 	public Application createApplication(@RequestBody Application application) {
 		return applicationRepository.save(application);
 	}
+	 // delete product rest api
+    @DeleteMapping("/application/{id}")
+    public ResponseEntity<Map<String, Boolean>> deleteApplication(@PathVariable int id){
+        Application application = applicationRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("No results found."));
+
+        applicationRepository.delete(application);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("deleted", Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+
 }
