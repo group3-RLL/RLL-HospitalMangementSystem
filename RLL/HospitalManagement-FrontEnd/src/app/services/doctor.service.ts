@@ -11,6 +11,7 @@ export class DoctorService {
 
     
   private baseURL = "http://localhost:9090/api/v1/doctor";
+  private appURL = "http://localhost:9090/api/v1/application";
   constructor(private httpClient: HttpClient) { }
 
   getDoctorList(): Observable<Doctor[]>{
@@ -30,5 +31,8 @@ export class DoctorService {
 
   deleteDoctor(id: number): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
+  deleteApplication(id: number): Observable<Object>{
+    return this.httpClient.delete(`${this.appURL}/${id}`);
   }
 }
