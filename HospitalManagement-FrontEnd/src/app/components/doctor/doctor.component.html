@@ -1,0 +1,49 @@
+<div class="box">
+  <h2>Doctor Details</h2>
+  <br>
+  <button  style="display: flex;  width: 150px;" class="btn btn-md btn-outline-primary" routerLink="/create-doctor">
+    <i  style="font-size: 27px;" class="fa fa-user"></i> &nbsp;&nbsp; &nbsp;New Doctor</button>
+       <br><br>
+     <thead>
+   <tr>
+     <table class="table table-bordered table-striped">
+         <thead>
+       <tr>
+         <th>Name</th>
+         <th>Age</th>
+         <th>Gender</th>
+         <th>Blood Group</th>
+         <th>Department</th>
+         <th>Phone</th>
+         <th>Email</th>
+         <th>Status</th>
+         <th>Address</th>
+         <th>Room</th>
+         <th> Actions </th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr *ngFor="let doctor of doctor">
+         <td><span>{{doctor.name}}</span></td>
+         <td><span>{{doctor.age}}</span></td>
+         <td><span>{{doctor.gender}}</span></td>
+         <td><span>{{doctor.blood}}</span></td>
+         <td><span>{{doctor.dept}}</span></td>
+         <td><span>{{doctor.phone}}</span></td>
+         <td><span>{{doctor.email}}</span></td>
+         <td><span>{{doctor.status}}</span></td>
+         <td><span>{{doctor.address}}</span></td>
+         <td><span>{{doctor.room}}</span></td>
+         <td>
+          <button (click) = "updateDoctor(doctor.id)" class = "btn btn-primary"> Update</button>
+          <button (click) = "doctorDetails(doctor.id)" class = "btn btn-warning" style="margin-left: 10px"> View</button>
+          <button (click) = "deleteDoctor(doctor.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+       </td>
+       </tr>
+       </tbody>
+     </table>
+     </tr>
+     </thead>
+     <button class="btn btn-success" routerLink="/dashboard">Back to Dashboard</button>
+    </div>
+    <!--Doctor Details--> 
