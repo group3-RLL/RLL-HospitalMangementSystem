@@ -11,7 +11,8 @@ import { PatientService } from 'src/app/services/patient.service'
   styleUrls: ['./regpatient.component.css']
 })
 export class RegpatientComponent implements OnInit {
-
+  
+  role:string =localStorage.getItem('role');
   patient: Patient = new Patient();
   patientService: PatientService;
 
@@ -32,9 +33,9 @@ export class RegpatientComponent implements OnInit {
 
   onSubmit() {
     console.log(this.patient);
+    console.log(this.role)
     this.saveApplication();
     alert("Patient Registered Successfully");
-    this.router.navigate(['/dashboard']);
   }
    
 }
