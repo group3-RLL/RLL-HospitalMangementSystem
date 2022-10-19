@@ -43,7 +43,9 @@
             <input type="text" class="form-control" id="address" name="address"[(ngModel)]="patient.address"  placeholder="Enter Address">
         </div>
        
-        <button class="btn btn-success" click="onSubmit()" type="submit">Submit</button>
+        <button class="btn btn-success" click="onSubmit()" type="submit">Submit</button>&nbsp;&nbsp;
+        <button *ngIf="role!==null" class="btn btn-warning" routerLink="/dashboard" type="submit">Back to Dashboard</button>
+        <button *ngIf="role ==null" class="btn btn-warning" routerLink="/home" type="submit">Back to Home</button>
     
     </form>
     </div>
