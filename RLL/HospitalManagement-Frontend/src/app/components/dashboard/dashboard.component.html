@@ -7,7 +7,7 @@
   <div style="width:1000px; margin:0 auto;">
     <div style="display: flex;" class="container">
     <button  *ngIf="role == 'Admin'"  style="background:rgb(252, 89, 89); width:500px; height:200px" routerLink="/doctor" id="details"  >Doctor details</button>&nbsp;&nbsp;&nbsp;&nbsp;
-    <button  *ngIf="role == 'Patient'"  style="background:rgb(252, 89, 89); width:500px; height:300px" routerLink="/regpatient" id="details"  >Register</button>&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button  *ngIf="role == 'Patient'"  style="background:rgb(252, 89, 89); width:500px; height:300px" routerLink="/regpatient" id="details"  >Admit Form</button>&nbsp;&nbsp;&nbsp;&nbsp; 
     <button  *ngIf="role == 'Admin' || role=='Doctor'" id="details"style="background:#ef7e06;  width:500px; height:200px" routerLink="/patient">Patient details</button>&nbsp;&nbsp;&nbsp;&nbsp;
     <button  *ngIf="role == 'Patient'"  style="background:rgb(89, 184, 252); width:500px; height:300px" routerLink="/createappointment" id="details"  >Book Appointments</button>&nbsp;&nbsp;&nbsp;&nbsp; 
     <button  *ngIf="role == 'Admin' || role=='Doctor'" id="details" style="background:#3b5fb3; width:500px; height:200px" routerLink="/appointment">Appointment details</button>
