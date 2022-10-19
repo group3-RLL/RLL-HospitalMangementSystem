@@ -1,0 +1,21 @@
+<div class="container">
+    <hr>
+    <hr>
+    <hr>
+    <h2>Book Appointments</h2>
+    <form (ngSubmit) = "onSubmit()" >
+    
+        <div class="form-group">
+            <label>Patient's Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="appointment.pname"  placeholder="Enter First Name">
+        </div>
+        <div class="form-group">
+            <label>Symptoms</label>
+            <input type="text" class="form-control" id="disease" name="disease" [(ngModel)]="appointment.symptoms"  placeholder="Enter Symptoms">
+        </div>
+       
+        <button class="btn btn-success" click="onSubmit()" type="submit">Book Appointment</button>
+    
+    </form>
+    </div>
+    

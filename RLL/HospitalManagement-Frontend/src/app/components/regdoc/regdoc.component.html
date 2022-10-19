@@ -1,0 +1,32 @@
+
+<div class="container">
+<hr>
+<hr>
+<hr>
+<h2>Registeration form</h2>
+<form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="application.name" name="name" placeholder="Enter Name">
+    </div>
+
+    <div class="form-group">
+        <label>Age</label>
+        <input type="text" class="form-control" id="age" [(ngModel)]="application.age" name="age" placeholder="Enter Age">
+    </div>
+
+    <div class="form-group">
+        <label>Qualifications</label>
+        <input type="text" class="form-control" id="qual" [(ngModel)]="application.qual" name="qual" placeholder="Enter Qualifications">
+    </div>
+
+    <div class="form-group">
+        <label>Contact Number</label>
+        <input type="text" class="form-control" id="number" [(ngModel)]="application.number" name="number" placeholder="Enter Contact Number">
+    </div>
+
+    <button class="btn btn-success" type="submit">Submit</button>
+
+</form>
+</div>

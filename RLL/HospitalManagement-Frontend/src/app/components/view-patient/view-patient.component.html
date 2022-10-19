@@ -1,0 +1,41 @@
+
+<div class="container">
+    <br /><br /><br />
+    <h3>View Patient Details</h3>
+    <hr />
+    <div>
+      <div>
+        <label> <b> FIRST NAME: </b></label> {{ patient.fname }}
+      </div>
+      <div>
+        <label> <b> LAST NAME: </b></label> {{ patient.lname }}
+      </div>
+      <div>
+        <label> <b> EMAIL:</b></label> {{ patient.email }}
+      </div>
+      <div>
+        <label> <b> DOB: </b></label> {{ patient.dob }}
+      </div>
+      <div>
+        <label> <b> PHONE: </b></label> {{ patient.phone }}
+      </div>
+      <div>
+        <label> <b> GENDER </b></label> {{ patient.gender }}
+      </div>
+      <div>
+        <label> <b> DISEASE :</b></label> {{ patient.disease }}
+      </div>
+      <div>
+        <label> <b> ROOM :</b></label> {{ patient.room }}
+      </div>
+      <div>
+        <label> <b> ADDRESS:</b></label> {{ patient.address }}
+      </div>
+      <br /><br />
+      <div>
+        <button routerLink="/patient" class="btn btn-success">
+          Back to Dashboard
+        </button>
+      </div>
+    </div>
+  </div>

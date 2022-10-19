@@ -1,0 +1,32 @@
+<div class="container">
+    <hr>
+    <hr>
+    <hr>
+    <h2>Job Applications</h2>
+      <hr>
+    <table *ngIf="role=='Admin'" class="table table-striped">
+        <thead class="table-header">
+            <tr>
+                <th> Applicant's Name </th>
+                <th> Age </th>
+                <th> Qualification</th>
+                <th> Phone Number</th>
+                <th> Actions </th>
+                
+    
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let application of application">
+                <td> {{ application.name }} </td>
+                <td> {{ application.age}} </td>
+                <td> {{ application.qual}} </td>
+                <td> {{ application.number}} </td>
+                <td>
+                    <button (click)="approve(application.id)" class="btn btn-success" style="margin-left: 10px"> Approve</button>
+                    <button (click)="reject(application.id)" class="btn btn-danger" style="margin-left: 10px">Reject</button>
+                </td>
+            </tr>   
+            <br><br>
+<button class="btn btn-success" routerLink="/dashboard">Back to Dashboard</button>
+    </table>

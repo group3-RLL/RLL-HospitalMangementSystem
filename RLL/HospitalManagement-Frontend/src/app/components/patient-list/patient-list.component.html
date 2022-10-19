@@ -1,0 +1,93 @@
+<div class="container"><br><br>
+  <h2 class="text-center">Patient Details</h2>
+  <br />
+  <button
+  *ngIf="role=='Admin'"
+    style="display: flex; width: 150px"
+    class="btn btn-md btn-outline-primary"
+    routerLink="/create-patient"
+  >
+    <i style="font-size: 27px" class="fa fa-user"></i> &nbsp;&nbsp; &nbsp;New
+    Patient
+  </button>
+  <br /><br />
+  <thead>
+    <tr>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>EMAIL</th>
+            <th>DOB</th>
+            <th>PHONE</th>
+            <th>GENDER</th>
+            <th>DISEASE</th>
+            <th>ROOM</th>
+            <th>ADDRESS</th>
+
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patient">
+            <td>
+              <span>{{ patient.fname }}</span>
+            </td>
+            <td>
+              <span>{{ patient.lname }}</span>
+            </td>
+            <td>
+              <span>{{ patient.email }}</span>
+            </td>
+            <td>
+              <span>{{ patient.dob }}</span>
+            </td>
+            <td>
+              <span>{{ patient.phone }}</span>
+            </td>
+            <td>
+              <span>{{ patient.gender }}</span>
+            </td>
+            <td>
+              <span>{{ patient.disease }}</span>
+            </td>
+            <td>
+              <span>{{ patient.room }}</span>
+            </td>
+            <td>
+              <span>{{ patient.address }}</span>
+            </td>
+            <td>
+              <div style="display:flex">
+              <button
+                (click)="updatePatient(patient.id)"
+                class="btn btn-primary"
+              >
+                Update
+              </button>
+              <button 
+                (click)="patientDetails(patient.id)"
+                class="btn btn-warning"
+                style="margin-left: 10px"
+              >
+                View
+              </button>
+              <button *ngIf="role=='Admin'"
+                (click)="deletePatient(patient.id)"
+                class="btn btn-danger"
+                style="margin-left: 10px"
+              >
+                Delete
+              </button>
+            </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </tr>
+  </thead>
+  <button class="btn btn-success" routerLink="/dashboard">
+    Back to Dashboard
+  </button>
+</div>

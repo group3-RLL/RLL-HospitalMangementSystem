@@ -1,0 +1,53 @@
+<div class="container">
+<hr>
+<hr>
+<hr>
+<h2>Appointment List</h2>
+<a style="color: rgb(86, 86, 86); font-size: x-large;">Welcome to Appointment list page.</a>
+  <hr>
+<table *ngIf="role=='Admin'" class="table table-striped">
+    <thead class="table-header">
+        <tr>
+            <th> Patient's Name </th>
+            <th> Symptoms </th>
+            <th> Actions </th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let appointment of appointments">
+            <td> {{ appointment.pname }} </td>
+            <td> {{ appointment.symptoms}} </td>
+
+            <td>
+                
+                <button (click)="deleteAppointment(appointment.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>   
+</table>
+
+<table *ngIf="role=='Doctor'"class="table table-striped">
+    <thead class="table-header">
+        <tr>
+            <th> ID </th>
+            <th> Patient's Name </th>
+            <th> Symptoms </th>
+            <th> Actions </th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let appointment of appointments">
+            <td> {{ appointment.id }} </td>
+            <td> {{ appointment.pname }} </td>
+            <td> {{ appointment.symptoms}} </td>
+            <td>
+                
+                <button (click)="attended(appointment.id)" class="btn btn-warning" style="margin-left: 10px">Attended</button>
+            </td>
+        </tr>   
+</table>
+<button class="btn btn-success" routerLink="/dashboard">Back to Dashboard</button>
+</div>

@@ -1,0 +1,39 @@
+<div class="box">
+    <h2>Invoice Details</h2>
+        <br><br>
+       <thead>
+     <tr>
+       <table class="table table-bordered table-striped">
+           <thead>
+         <tr>
+           <th>Admit Date</th>
+           <th>Release Date</th>
+           <th>Patient Name</th>
+           <th>Patient Mobile</th>
+           <th>Patient Address</th>
+           <th>Complaint</th>
+           <th>Room Charge</th>
+           <th>Doctor Fee</th>
+           <th>Medicine Cost</th>
+           <th>Other Charge</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr *ngFor="let invoice of invoice">
+           <td><span>{{invoice.admitdate}}</span></td>
+           <td><span>{{invoice.releasedate}}</span></td>
+           <td><span>{{invoice.patientname}}</span></td>
+           <td><span>{{invoice.patientmobile}}</span></td>
+           <td><span>{{invoice.patientaddress}}</span></td>
+           <td><span>{{invoice.disease}}</span></td>
+           <td><span>{{invoice.roomcharge}}</span></td>
+           <td><span>{{invoice.doctorfee}}</span></td>
+           <td><span>{{invoice.medicinecost}}</span></td>
+           <td><span>{{invoice.othercharge}}</span></td>
+         </tr>
+         </tbody>
+       </table>
+       </tr>
+       </thead>
+       <button class="btn btn-success" routerLink="/dashboard">Back to Dashboard</button>
+      </div>
