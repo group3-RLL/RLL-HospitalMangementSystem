@@ -173,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `application` (
     )
 
 --
--- Dumping data for table `invoice`
+-- Dumping data for table `application`
 --
 INSERT INTO `invoice`(`id`, `name`, `qual`, `number`, `age`) VALUES 
 ('1','Dorian','Dietician','7998923623','29')
